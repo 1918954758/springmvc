@@ -1,0 +1,9 @@
+
+
+create table psg_wechat_media(
+id int primary key auto_increment,#auto_increment只是MySQL特有的
+media_id varchar(50) not null,
+type varchar(10),
+created_time varchar(20),
+status varchar(10),
+);

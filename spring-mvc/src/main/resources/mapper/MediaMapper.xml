@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间是对应接口的包名+类名-->
+<mapper namespace="com.zichen.ssm.mapper.MediaMapper">
+    <!--paramerType: java自定义类型或数据类型-->
+    <insert id="saveMedia" parameterType="Media">
+        insert into media (TYPE, MEDIA_ID, CREATED_TIME, STATUS)
+        values (#{type}, #{media_id}, now(), #{status})
+    </insert>
+    <select id="queryAll" resultType="Media">
+        select TYPE, MEDIA_ID, CREATED_TIME, STATUS
+        from media
+        where 1=1
+    </select>
+</mapper>

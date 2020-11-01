@@ -1,0 +1,5 @@
+# Project exclude paths
+/dubbo-api/target/
+/dubbo-consumer/target/
+/dubbo-provider/target/
+/spring-mvc/target/
