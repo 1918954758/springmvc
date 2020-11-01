@@ -23,7 +23,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!--指定数据源-->
         <property name="dataSource" ref="jdbcDataSource"/>
-        <!--类型别名包，引入com.lmei.ssn.entity下的所有类-->
+        <!--类型别名包，引入com.zichen.ssm下的所有类-->
         <property name="typeAliasesPackage" value="com.zichen.ssm"/>
         <!--指定sql映射xml文件的路径-->
         <property name="mapperLocations" value="classpath:/mapper/MediaMapper.xml"/>
@@ -33,7 +33,7 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--指定sql会话工厂，在上面配置过得-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <!--指定基础包，即自动扫描com.lmer.ssm.dao这个报下的所有几口类-->
+        <!--指定基础包，即自动扫描com.zichen.ssm这个报下的所有几口类-->
         <property name="basePackage" value="com.zichen.ssm"/>
     </bean>
 
